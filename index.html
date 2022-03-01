@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnimationTiming 2022</title>
+    <script src="https://kit.fontawesome.com/e4704dcbbd.js" crossorigin="anonymous"></script>
     <style>
         :root{
             --clr-bg:#ffffff;
@@ -14,7 +15,6 @@
         }
         *{
             font-family: Georgia;
-            font-style: italic;
             padding: 0;
             margin: 0;
             box-sizing: border-box;
@@ -42,7 +42,10 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            gap: 20px;
+        }
+        .s1,
+        .s2{
+            font-style: italic;
         }
         .s1,
         .s2,
@@ -57,7 +60,7 @@
 
         .s1{background-color: blanchedalmond;}
         .s2{background-color: rgb(250, 217, 168);}
-        .s3{background-color: rgb(248, 211, 155);}
+        .s3{background-color: rgb(248, 211, 155);font-weight: bold;}
         .s4{background-color: rgb(236, 179, 92);}
 
         .s1 h1{
@@ -86,12 +89,12 @@
             filter: saturate(300%) contrast(150%);
             position: relative;
             left: 0%;
+            animation: move 1.5s infinite alternate ;
         }
 
-
         @keyframes move {
-            from{}
-            to{}
+            from{left: 0%;}
+            to{left: 90%;}
         }
     </style>
 </head>
@@ -131,12 +134,23 @@
             </div>
         </section>
         <section class="s3">
-            <button></button>
+            <input type="checkbox" name="" id="">
+            <label for="" id="">
+                <span>Start!</span>
+            </label>
         </section>
         <section class="s4">
             <div><span>Transition time: 1s</span></div>
-            <input type="range" min="0" max="10" value="1" step="0.1">
+            <input onchange="timeChange()" type="range" min="0" max="10" value="1" step="0.1">
         </section>
     </main>
+
+    <script type="text/javascript">
+        const balls = document.getElementsByTagName('img');
+        timeChange(){
+            balls.
+            event.target.value
+        }
+    </script>
 </body>
 </html>
